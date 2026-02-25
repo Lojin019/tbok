@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محافظة تيماء</title>
+  <link rel="stylesheet" href="tayma.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">🌟 منطقة تبوك</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../tabuk/tabuk.html">تبوك</a></li>
+        <li><a href="../dhuba/dhuba.html">ضباء</a></li>
+        <li><a href="../alwajh/alwajh.html">الوجه</a></li>
+        <li><a href="../amlaj/amlaj.html">أملج</a></li>
+        <li><a href="../haql/haql.html">حقل</a></li>
+        <li><a href="../tayma/tayma.html" class="active">تيماء</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">منطقة تبوك</div>
+      <h1>محافظة تيماء</h1>
+      <p>مهد الحضارات — كنز الآثار وإرث الإنسانية الأول</p>
+      <div class="hero-stats">
+        <div class="h-stat"><span>12,000</span><small>سنة تاريخ</small></div>
+        <div class="h-stat"><span>264كم</span><small>جنوب شرق تبوك</small></div>
+        <div class="h-stat"><span id="counter-pop" data-target="25000">0</span><small>نسمة تقريباً</small></div>
+      </div>
+    </div>
+    <div class="scroll-down">↓</div>
+  </section>
+
+  <section class="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text">
+          <h2>نبذة عن المحافظة</h2>
+          <div class="divider"></div>
+          <p>تيماء محافظة سعودية تتبع إدارياً منطقة تبوك، تبعد نحو 264 كيلومتراً إلى الجنوب الشرقي من مدينة تبوك. استوطنها وبناها العرب القدماء من الثموديين والعماليق.</p>
+          <p>تُعدّ تيماء من أقدم المواطن البشرية في شبه الجزيرة العربية، إذ تشير أقدم آثارها إلى العصر الحجري الجديد الذي يعود تاريخه إلى ما قبل 12 ألف عام تقريباً. وبذلك تكون شهدت تعاقب الحضارات الإنسانية عليها على مدى آلاف السنين.</p>
+          <p>تحتضن تيماء كنوزاً أثرية استثنائية تشمل نقوشاً ثمودية وآرامية ونبطية، وآثاراً من الحضارة البابلية والآشورية، مما يجعلها موقعاً أثرياً عالمياً بامتياز.</p>
+        </div>
+        <div class="overview-info">
+          <div class="info-card">
+            <h3>معلومات سريعة</h3>
+            <ul class="info-list">
+              <li><span class="info-icon">📍</span><span><strong>الموقع:</strong> جنوب شرق تبوك</span></li>
+              <li><span class="info-icon">📏</span><span><strong>المسافة عن تبوك:</strong> 264 كم</span></li>
+              <li><span class="info-icon">🏺</span><span><strong>التاريخ:</strong> 12,000 سنة</span></li>
+              <li><span class="info-icon">📜</span><span><strong>النقوش:</strong> ثمودية وآرامية ونبطية</span></li>
+              <li><span class="info-icon">🌡️</span><span><strong>المناخ:</strong> صحراوي جاف</span></li>
+              <li><span class="info-icon">🌟</span><span><strong>التصنيف:</strong> موقع أثري عالمي</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landmarks">
+    <div class="container">
+      <h2 class="section-title">أبرز المعالم الأثرية والسياحية</h2>
+      <div class="divider center"></div>
+      <div class="landmarks-grid" id="landmarksGrid"></div>
+    </div>
+  </section>
+
+  <section class="interactive">
+    <div class="container">
+      <h2 class="section-title">استكشف تيماء</h2>
+      <div class="divider center"></div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="history">التاريخ</button>
+        <button class="tab-btn" data-tab="archaeology">الآثار</button>
+        <button class="tab-btn" data-tab="civilizations">الحضارات</button>
+        <button class="tab-btn" data-tab="tourism">السياحة</button>
+      </div>
+      <div class="tab-content" id="tabContent"></div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">معرض تيماء</h2>
+      <div class="divider center"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- التنقل بين المحافظات -->
+  <section class="gov-nav">
+    <div class="container">
+      <h2 class="section-title">استكشف محافظات أخرى</h2>
+      <div class="divider center"></div>
+      <div class="gov-nav-grid">
+        <a href="../tabuk/tabuk.html" class="gov-nav-card">🏙️<span>تبوك</span></a>
+        <a href="../dhuba/dhuba.html" class="gov-nav-card">⚓<span>ضباء</span></a>
+        <a href="../alwajh/alwajh.html" class="gov-nav-card">🐚<span>الوجه</span></a>
+        <a href="../amlaj/amlaj.html" class="gov-nav-card">🌴<span>أملج</span></a>
+        <a href="../haql/haql.html" class="gov-nav-card">🏔️<span>حقل</span></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p>محافظة تيماء — منطقة تبوك، المملكة العربية السعودية</p>
+      <a href="../index.html" class="footer-back">العودة للصفحة الرئيسية →</a>
+    </div>
+  </footer>
+
+  <script src="tayma.js"></script>
+</body>
+</html>

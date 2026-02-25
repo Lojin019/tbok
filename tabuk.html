@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محافظة تبوك</title>
+  <link rel="stylesheet" href="tabuk.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+    <!-- شريط التنقل -->
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">🌟 منطقة تبوك</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../tabuk/tabuk.html" class="active">تبوك</a></li>
+        <li><a href="../dhuba/dhuba.html">ضباء</a></li>
+        <li><a href="../alwajh/alwajh.html">الوجه</a></li>
+        <li><a href="../amlaj/amlaj.html">أملج</a></li>
+        <li><a href="../haql/haql.html">حقل</a></li>
+        <li><a href="../tayma/tayma.html">تيماء</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- قسم الهيرو -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">منطقة تبوك</div>
+      <h1>محافظة تبوك</h1>
+      <p>عاصمة الشمال الغربي — مدينة الجبال والتاريخ والحضارة</p>
+      <div class="hero-stats">
+        <div class="h-stat"><span id="counter-pop" data-target="600000">0</span><small>نسمة تقريباً</small></div>
+        <div class="h-stat"><span>+500</span><small>سنة تاريخ</small></div>
+        <div class="h-stat"><span>1500م</span><small>ارتفاع عن سطح البحر</small></div>
+      </div>
+    </div>
+    <div class="scroll-down">↓</div>
+  </section>
+
+  <!-- نبذة عامة -->
+  <section class="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text">
+          <h2>نبذة عن المحافظة</h2>
+          <div class="divider"></div>
+          <p>تبوك هي عاصمة منطقة تبوك وأكبر مدنها، تقع في الشمال الغربي من المملكة العربية السعودية على ارتفاع يبلغ نحو 768 متراً فوق مستوى سطح البحر. يعود تاريخها إلى ما قبل الميلاد بأكثر من 500 عام، حين كانت تُعرف باسم "طابو".</p>
+          <p>اشتُهرت تبوك تاريخياً بغزوة تبوك في العهد النبوي، وتحتضن اليوم العديد من المعالم الأثرية والتاريخية كقلعة تبوك ومسجد التوبة. وتُعدّ المدينة مركزاً تجارياً وعسكرياً وسياحياً بارزاً.</p>
+          <p>تتميز تبوك بمناخها المعتدل نسبياً مقارنة بسائر مناطق المملكة، وتحيط بها الجبال من عدة جهات مما يمنحها طابعاً جغرافياً مميزاً. وتشهد المدينة نمواً عمرانياً وسياحياً متسارعاً في إطار رؤية 2030.</p>
+        </div>
+        <div class="overview-info">
+          <div class="info-card">
+            <h3>معلومات سريعة</h3>
+            <ul class="info-list">
+              <li><span class="info-icon">📍</span><span><strong>الموقع:</strong> شمال غرب المملكة</span></li>
+              <li><span class="info-icon">🌡️</span><span><strong>المناخ:</strong> جاف معتدل</span></li>
+              <li><span class="info-icon">🏔️</span><span><strong>الارتفاع:</strong> 768 متر</span></li>
+              <li><span class="info-icon">🕌</span><span><strong>أبرز المعالم:</strong> قلعة تبوك</span></li>
+              <li><span class="info-icon">🚂</span><span><strong>المواصلات:</strong> مطار، قطار، طرق برية</span></li>
+              <li><span class="info-icon">📅</span><span><strong>التأسيس:</strong> ما قبل الميلاد</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المعالم السياحية -->
+  <section class="landmarks">
+    <div class="container">
+      <h2 class="section-title">أبرز المعالم السياحية</h2>
+      <div class="divider center"></div>
+      <div class="landmarks-grid" id="landmarksGrid"></div>
+    </div>
+  </section>
+
+  <!-- المعلومات التفاعلية -->
+  <section class="interactive">
+    <div class="container">
+      <h2 class="section-title">استكشف تبوك</h2>
+      <div class="divider center"></div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="history">التاريخ</button>
+        <button class="tab-btn" data-tab="tourism">السياحة</button>
+        <button class="tab-btn" data-tab="nature">الطبيعة</button>
+        <button class="tab-btn" data-tab="projects">المشاريع</button>
+      </div>
+      <div class="tab-content" id="tabContent"></div>
+    </div>
+  </section>
+
+  <!-- معرض الصور -->
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">معرض تبوك</h2>
+      <div class="divider center"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- التنقل بين المحافظات -->
+  <section class="gov-nav">
+    <div class="container">
+      <h2 class="section-title">استكشف محافظات أخرى</h2>
+      <div class="divider center"></div>
+      <div class="gov-nav-grid">
+        <a href="../dhuba/dhuba.html" class="gov-nav-card">⚓<span>ضباء</span></a>
+        <a href="../alwajh/alwajh.html" class="gov-nav-card">🐚<span>الوجه</span></a>
+        <a href="../amlaj/amlaj.html" class="gov-nav-card">🌴<span>أملج</span></a>
+        <a href="../haql/haql.html" class="gov-nav-card">🏔️<span>حقل</span></a>
+        <a href="../tayma/tayma.html" class="gov-nav-card">🏺<span>تيماء</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- التذييل -->
+  <footer class="footer">
+    <div class="container">
+      <p>محافظة تبوك — منطقة تبوك، المملكة العربية السعودية</p>
+      <a href="../index.html" class="footer-back">العودة للصفحة الرئيسية →</a>
+    </div>
+  </footer>
+
+  <script src="tabuk.js"></script>
+</body>
+</html>

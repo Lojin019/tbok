@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محافظة أملج</title>
+  <link rel="stylesheet" href="amlaj.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">🌟 منطقة تبوك</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../tabuk/tabuk.html">تبوك</a></li>
+        <li><a href="../dhuba/dhuba.html">ضباء</a></li>
+        <li><a href="../alwajh/alwajh.html">الوجه</a></li>
+        <li><a href="../amlaj/amlaj.html" class="active">أملج</a></li>
+        <li><a href="../haql/haql.html">حقل</a></li>
+        <li><a href="../tayma/tayma.html">تيماء</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">منطقة تبوك</div>
+      <h1>محافظة أملج</h1>
+      <p>مدينة المانجو والشواطئ البكر — حيث تلتقي الطبيعة والتاريخ</p>
+      <div class="hero-stats">
+        <div class="h-stat"><span id="counter-pop" data-target="30000">0</span><small>نسمة تقريباً</small></div>
+        <div class="h-stat"><span>500كم</span><small>جنوب غرب تبوك</small></div>
+        <div class="h-stat"><span>🥭</span><small>مدينة المانجو</small></div>
+      </div>
+    </div>
+    <div class="scroll-down">↓</div>
+  </section>
+
+  <section class="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text">
+          <h2>نبذة عن المحافظة</h2>
+          <div class="divider"></div>
+          <p>تقع محافظة أملج على ساحل البحر الأحمر جنوب غرب مدينة تبوك، وتبعد عنها نحو 500 كيلومتر باتجاه الجنوب الغربي. تُعدّ من أجمل المحافظات الساحلية في منطقة تبوك بطبيعتها الخلابة وشواطئها البكر.</p>
+          <p>تشتهر أملج بزراعة المانجو التي تُعدّ من أجود أنواع المانجو في المملكة، كما تضم مزارع النخيل المنتشرة على الشواطئ البكر في رأس الشبعان والدقم، والرمال البيضاء على الساحل.</p>
+          <p>تحتضن المحافظة موقع الحوراء الأثري الذي كان من أشهر مدن وموانئ الجزيرة العربية قديماً، مما يجعلها وجهة فريدة تجمع بين الطبيعة والتاريخ.</p>
+        </div>
+        <div class="overview-info">
+          <div class="info-card">
+            <h3>معلومات سريعة</h3>
+            <ul class="info-list">
+              <li><span class="info-icon">📍</span><span><strong>الموقع:</strong> جنوب غرب تبوك</span></li>
+              <li><span class="info-icon">📏</span><span><strong>المسافة عن تبوك:</strong> 500 كم</span></li>
+              <li><span class="info-icon">🥭</span><span><strong>الشهرة:</strong> مزارع المانجو</span></li>
+              <li><span class="info-icon">🏛️</span><span><strong>الآثار:</strong> موقع الحوراء</span></li>
+              <li><span class="info-icon">🏖️</span><span><strong>الشواطئ:</strong> رأس الشبعان والدقم</span></li>
+              <li><span class="info-icon">🌡️</span><span><strong>المناخ:</strong> ساحلي دافئ رطب</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landmarks">
+    <div class="container">
+      <h2 class="section-title">أبرز المعالم السياحية</h2>
+      <div class="divider center"></div>
+      <div class="landmarks-grid" id="landmarksGrid"></div>
+    </div>
+  </section>
+
+  <section class="interactive">
+    <div class="container">
+      <h2 class="section-title">استكشف أملج</h2>
+      <div class="divider center"></div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="history">التاريخ</button>
+        <button class="tab-btn" data-tab="tourism">السياحة</button>
+        <button class="tab-btn" data-tab="agriculture">الزراعة</button>
+        <button class="tab-btn" data-tab="nature">الطبيعة</button>
+      </div>
+      <div class="tab-content" id="tabContent"></div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">معرض أملج</h2>
+      <div class="divider center"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- التنقل بين المحافظات -->
+  <section class="gov-nav">
+    <div class="container">
+      <h2 class="section-title">استكشف محافظات أخرى</h2>
+      <div class="divider center"></div>
+      <div class="gov-nav-grid">
+        <a href="../tabuk/tabuk.html" class="gov-nav-card">🏙️<span>تبوك</span></a>
+        <a href="../dhuba/dhuba.html" class="gov-nav-card">⚓<span>ضباء</span></a>
+        <a href="../alwajh/alwajh.html" class="gov-nav-card">🐚<span>الوجه</span></a>
+        <a href="../haql/haql.html" class="gov-nav-card">🏔️<span>حقل</span></a>
+        <a href="../tayma/tayma.html" class="gov-nav-card">🏺<span>تيماء</span></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p>محافظة أملج — منطقة تبوك، المملكة العربية السعودية</p>
+      <a href="../index.html" class="footer-back">العودة للصفحة الرئيسية →</a>
+    </div>
+  </footer>
+
+  <script src="amlaj.js"></script>
+</body>
+</html>

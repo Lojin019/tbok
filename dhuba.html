@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محافظة ضباء</title>
+  <link rel="stylesheet" href="dhuba.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">🌟 منطقة تبوك</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../tabuk/tabuk.html">تبوك</a></li>
+        <li><a href="../dhuba/dhuba.html" class="active">ضباء</a></li>
+        <li><a href="../alwajh/alwajh.html">الوجه</a></li>
+        <li><a href="../amlaj/amlaj.html">أملج</a></li>
+        <li><a href="../haql/haql.html">حقل</a></li>
+        <li><a href="../tayma/tayma.html">تيماء</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">منطقة تبوك</div>
+      <h1>محافظة ضباء</h1>
+      <p>درة البحر الأحمر — ميناء الأسطول وشواطئ الأحلام</p>
+      <div class="hero-stats">
+        <div class="h-stat"><span id="counter-pop" data-target="50000">0</span><small>نسمة تقريباً</small></div>
+        <div class="h-stat"><span>1352هـ</span><small>تأسيس القلعة</small></div>
+        <div class="h-stat"><span>27°</span><small>خط العرض</small></div>
+      </div>
+    </div>
+    <div class="scroll-down">↓</div>
+  </section>
+
+  <section class="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text">
+          <h2>نبذة عن المحافظة</h2>
+          <div class="divider"></div>
+          <p>تقع محافظة ضباء على الساحل الشمالي الغربي للبحر الأحمر، وتبعد عن مدينة تبوك نحو 220 كيلومتراً باتجاه الجنوب الغربي. تُعرف ضباء بلقب "درة البحر الأحمر" لما تتمتع به من شواطئ فائقة الجمال والنقاء.</p>
+          <p>تحتضن المحافظة ميناءً تجارياً وصيدياً مهماً، وتُعدّ من أبرز المراكز الاقتصادية في منطقة تبوك. كما تضم قلعة الملك عبدالعزيز التاريخية التي بُنيت عام 1352هـ/1933م لتكون مقراً للحكم في المنطقة.</p>
+          <p>تشتهر ضباء بصيد الأسماك وتجارة اللؤلؤ تاريخياً، وتمتلك بنية تحتية سياحية متطورة تجعلها وجهة مفضلة لمحبي البحر والطبيعة الساحلية.</p>
+        </div>
+        <div class="overview-info">
+          <div class="info-card">
+            <h3>معلومات سريعة</h3>
+            <ul class="info-list">
+              <li><span class="info-icon">📍</span><span><strong>الموقع:</strong> ساحل البحر الأحمر الشمالي</span></li>
+              <li><span class="info-icon">📏</span><span><strong>المسافة عن تبوك:</strong> 220 كم</span></li>
+              <li><span class="info-icon">⚓</span><span><strong>الميناء:</strong> ميناء تجاري وصيدي</span></li>
+              <li><span class="info-icon">🏰</span><span><strong>أبرز المعالم:</strong> قلعة الملك عبدالعزيز</span></li>
+              <li><span class="info-icon">🐟</span><span><strong>الاقتصاد:</strong> صيد وتجارة وسياحة</span></li>
+              <li><span class="info-icon">🌡️</span><span><strong>المناخ:</strong> ساحلي دافئ</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landmarks">
+    <div class="container">
+      <h2 class="section-title">أبرز المعالم السياحية</h2>
+      <div class="divider center"></div>
+      <div class="landmarks-grid" id="landmarksGrid"></div>
+    </div>
+  </section>
+
+  <section class="interactive">
+    <div class="container">
+      <h2 class="section-title">استكشف ضباء</h2>
+      <div class="divider center"></div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="history">التاريخ</button>
+        <button class="tab-btn" data-tab="tourism">السياحة</button>
+        <button class="tab-btn" data-tab="nature">الطبيعة</button>
+        <button class="tab-btn" data-tab="economy">الاقتصاد</button>
+      </div>
+      <div class="tab-content" id="tabContent"></div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">معرض ضباء</h2>
+      <div class="divider center"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- التنقل بين المحافظات -->
+  <section class="gov-nav">
+    <div class="container">
+      <h2 class="section-title">استكشف محافظات أخرى</h2>
+      <div class="divider center"></div>
+      <div class="gov-nav-grid">
+        <a href="../tabuk/tabuk.html" class="gov-nav-card">🏙️<span>تبوك</span></a>
+        <a href="../alwajh/alwajh.html" class="gov-nav-card">🐚<span>الوجه</span></a>
+        <a href="../amlaj/amlaj.html" class="gov-nav-card">🌴<span>أملج</span></a>
+        <a href="../haql/haql.html" class="gov-nav-card">🏔️<span>حقل</span></a>
+        <a href="../tayma/tayma.html" class="gov-nav-card">🏺<span>تيماء</span></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p>محافظة ضباء — منطقة تبوك، المملكة العربية السعودية</p>
+      <a href="../index.html" class="footer-back">العودة للصفحة الرئيسية →</a>
+    </div>
+  </footer>
+
+  <script src="dhuba.js"></script>
+</body>
+</html>

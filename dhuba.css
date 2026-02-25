@@ -1,0 +1,177 @@
+/* ===== متغيرات محافظة ضباء ===== */
+:root {
+  --gov-color: #1a4a6b;
+  --gov-dark: #0f2d45;
+  --gov-light: #e8f0f5;
+  --secondary: #c8a84b;
+  --text: #2c2c2c;
+  --text-light: #666;
+  --white: #ffffff;
+  --bg: #f5f8fb;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-hover: 0 8px 35px rgba(0,0,0,0.2);
+  --radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Cairo', sans-serif; color: var(--text); background: var(--white); direction: rtl; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.navbar {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 1000;
+  background: rgba(26, 74, 107, 0.97); backdrop-filter: blur(10px);
+  padding: 15px 0; box-shadow: var(--shadow);
+}
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+.back-btn { display: flex; align-items: center; gap: 8px; color: var(--white); font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
+.back-btn:hover { color: var(--secondary); }
+.nav-title { color: var(--white); font-size: 1.2rem; font-weight: 700; }
+
+.hero {
+  position: relative; height: 100vh; min-height: 600px;
+  background: linear-gradient(135deg, #0f2d45 0%, #1a4a6b 50%, #2d6b8a 100%);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('tabuk-coast.jpg') center/cover no-repeat; opacity: 0.2;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(15,45,69,0.7) 0%, rgba(26,74,107,0.4) 50%, rgba(15,45,69,0.9) 100%);
+}
+.hero-content { position: relative; z-index: 2; text-align: center; color: var(--white); padding: 0 20px; animation: fadeInUp 1s ease; }
+.hero-badge { display: inline-block; background: var(--secondary); color: #1a1a2e; padding: 6px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; }
+.hero-content h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.hero-content p { font-size: clamp(1rem, 2vw, 1.3rem); opacity: 0.9; margin-bottom: 40px; }
+.hero-stats { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+.h-stat { text-align: center; }
+.h-stat span { display: block; font-size: 2rem; font-weight: 900; color: var(--secondary); }
+.h-stat small { font-size: 0.85rem; opacity: 0.8; }
+.scroll-down { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: var(--white); font-size: 1.5rem; animation: bounce 2s infinite; z-index: 2; }
+
+.overview { padding: 100px 0; background: var(--bg); }
+.overview-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start; }
+.overview-text h2 { font-size: 2rem; font-weight: 900; color: var(--gov-color); margin-bottom: 15px; }
+.divider { width: 70px; height: 4px; background: linear-gradient(to left, var(--gov-color), var(--secondary)); margin-bottom: 25px; border-radius: 2px; }
+.divider.center { margin: 0 auto 40px; }
+.overview-text p { font-size: 1.05rem; line-height: 1.9; color: var(--text); margin-bottom: 18px; }
+.info-card { background: var(--white); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); border-top: 4px solid var(--gov-color); }
+.info-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--gov-color); margin-bottom: 20px; }
+.info-list { display: flex; flex-direction: column; gap: 14px; }
+.info-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; line-height: 1.5; }
+.info-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+.landmarks { padding: 100px 0; background: var(--white); }
+.section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: var(--text); text-align: center; margin-bottom: 15px; }
+.landmarks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.landmark-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: var(--transition); }
+.landmark-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.lm-icon { background: var(--gov-light); padding: 30px; text-align: center; font-size: 3rem; }
+.lm-body { padding: 20px; }
+.lm-body h4 { font-size: 1.1rem; font-weight: 700; color: var(--gov-color); margin-bottom: 8px; }
+.lm-body p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+
+.interactive { padding: 100px 0; background: var(--bg); }
+.tabs { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.tab-btn { padding: 12px 30px; border: 2px solid var(--gov-color); background: transparent; color: var(--gov-color); border-radius: 50px; font-family: 'Cairo', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+.tab-btn.active, .tab-btn:hover { background: var(--gov-color); color: var(--white); }
+.tab-content { background: var(--white); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); min-height: 200px; animation: fadeIn 0.4s ease; }
+.tab-pane h3 { font-size: 1.4rem; font-weight: 700; color: var(--gov-color); margin-bottom: 15px; }
+.tab-pane p { font-size: 1rem; line-height: 1.9; color: var(--text); margin-bottom: 15px; }
+.tab-pane ul { padding-right: 20px; }
+.tab-pane ul li { font-size: 0.95rem; line-height: 1.8; color: var(--text); list-style: disc; }
+
+.gallery { padding: 100px 0; background: var(--white); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.gallery-item { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; cursor: pointer; transition: var(--transition); position: relative; }
+.gallery-item:hover { transform: scale(1.03); box-shadow: var(--shadow-hover); }
+.gallery-item .g-bg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; transition: var(--transition); }
+.gallery-item:hover .g-bg { transform: scale(1.1); }
+.gallery-item .g-label { position: absolute; bottom: 0; right: 0; left: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); color: var(--white); padding: 15px; font-weight: 600; font-size: 0.9rem; }
+
+.footer { background: var(--gov-dark); color: var(--white); padding: 30px 0; text-align: center; }
+.footer .container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.footer p { opacity: 0.7; }
+.footer-back { color: var(--secondary); font-weight: 600; transition: var(--transition); }
+.footer-back:hover { color: var(--white); }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(10px); } }
+
+@media (max-width: 992px) { .overview-grid { grid-template-columns: 1fr; } .landmarks-grid { grid-template-columns: repeat(2, 1fr); } .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .landmarks-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } .hero-stats { gap: 25px; } }
+
+/* ===== شريط التنقل المحدّث ===== */
+.nav-logo { color: var(--white); font-size: 1.1rem; font-weight: 700; text-decoration: none; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; padding: 6px 12px; border-radius: 20px; transition: var(--transition); text-decoration: none; }
+.nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); color: var(--white); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { display: block; width: 25px; height: 3px; background: var(--white); border-radius: 3px; }
+
+/* ===== قسم التنقل بين المحافظات ===== */
+.gov-nav { padding: 70px 0; background: var(--gov-light, #f0f8f0); }
+.gov-nav-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.gov-nav-card { display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--white); border: 2px solid transparent; border-radius: var(--radius); padding: 20px 25px; font-size: 1.8rem; text-decoration: none; color: var(--text); font-weight: 700; transition: var(--transition); box-shadow: var(--shadow); min-width: 100px; }
+.gov-nav-card span { font-size: 0.9rem; color: var(--gov-color); }
+.gov-nav-card:hover { border-color: var(--gov-color); transform: translateY(-5px); box-shadow: var(--shadow-hover); background: var(--gov-light, #f0f8f0); }
+
+/* ===== الجوال ===== */
+@media (max-width: 900px) {
+  .nav-links { display: none; position: absolute; top: 60px; right: 0; left: 0; background: var(--gov-color); flex-direction: column; padding: 20px; gap: 5px; z-index: 999; }
+  .nav-links.open { display: flex; }
+  .hamburger { display: flex; }
+}
+
+/* ===== صور المعالم الحقيقية ===== */
+.lm-img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.landmark-card {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--white);
+  transition: var(--transition);
+}
+.landmark-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.lm-body { padding: 15px; }
+.lm-body h4 { margin: 0 0 8px; font-size: 1rem; color: var(--gov-color); }
+.lm-body p { margin: 0; font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+/* ===== معرض الصور الحقيقية ===== */
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4/3;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+.g-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: white;
+  padding: 20px 12px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
